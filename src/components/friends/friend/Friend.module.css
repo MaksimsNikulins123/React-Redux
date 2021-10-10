@@ -1,0 +1,10 @@
+.friendInfo{
+    text-align: center;
+}
+.friendAvatar img{
+    width: 20px;
+    height: 20px;
+}
+.friendName{
+    font-style: oblique;
+}

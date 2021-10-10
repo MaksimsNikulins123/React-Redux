@@ -1,0 +1,11 @@
+.message{
+   
+    color: rgb(234, 235, 226);
+    padding: 10px;
+    background: seagreen;
+    font-style: italic;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 1fr 3fr 8fr;
+    background: url('https://st2.depositphotos.com/3928745/5733/i/950/depositphotos_57335789-stock-photo-abstract-social-network-and-technology.jpg') no-repeat;
+    grid-template-areas: 
+    /* "users textarea messages" */
+    "users content"
+    
+}
+.users{
+    grid-area: users;
+    background: url('https://www.designpieces.com/wp-content/uploads/2012/12/182-social-media-colours.jpg') no-repeat;
+}
+/* .content_textarea{
+    grid-area: textarea;
+}
+.messages{
+    grid-area: messages;
+} */
+.content{
+    grid-area: content;
+}
+ 
+
+

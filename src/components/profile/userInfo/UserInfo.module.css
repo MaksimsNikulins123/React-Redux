@@ -1,0 +1,21 @@
+.item { 
+  padding: 10px;   
+  /* margin: 20px 0 0 20px; */
+  display: flex;
+  color: blanchedalmond;
+}
+.userlogo img{
+  margin-right: 10px;  
+  width: 50px;
+}
+.description{
+  /* text-align: center; */
+  background: rgb(41, 81, 155);
+  opacity: 0.9;
+  /* margin-left: 10px; */
+  width: 200px;
+}
+.description p{
+  margin: 0 0 0 10px;
+}
+    

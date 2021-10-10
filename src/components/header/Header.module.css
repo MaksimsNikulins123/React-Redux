@@ -1,0 +1,8 @@
+.header{
+  background: url('https://img.lovepik.com/photo/50066/7884.jpg_wh860.jpg') ;
+    grid-area: header;
+    margin-bottom: 10px;  
+    }
+    .header img{
+      width: 150px; 
+    }

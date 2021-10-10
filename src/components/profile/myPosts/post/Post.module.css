@@ -1,0 +1,22 @@
+.item{
+    margin-top: 20px;
+}
+.item img{
+    width: 50px;
+}
+.post{
+    display: flex;
+}
+.post span{
+    margin-left: 20px;
+    color: cornsilk;
+    background: #4e56c7;
+    padding: 10px;
+    border-radius: 50%;
+}
+.like{
+    display: block;
+}
+.like span{
+    color: rgb(243, 26, 135);
+}
