@@ -1,41 +1,22 @@
 import DialogItem from "./DialogItem";
 import { getUserTopicActionCreator } from '../../redux/dialogs-reducer';
-import StoreContext from "../../../StoreContext";
+import { connect } from "react-redux";
 
-const DialogItemContainer = () => {
-
-    return(
-        <StoreContext.Consumer>
-            {
-                (store) => 
-                {
-                    let state = store.getState();
-
-                    let getUserTopic = (messageID) => {
-                    let action = getUserTopicActionCreator(messageID)
-                    store.dispatch(action)
-                    }
-
-                    let users = state.dialogsPage.dialogsData.map( 
-                        (dialog) => 
-                            <DialogItem 
-                                key={dialog.id} 
-                                id={dialog.id} 
-                                name={dialog.name} 
-                                avatar={dialog.avatar}
-                                getUserTopic={getUserTopic}
-                            />
-                    )
-                    return (
-                        <div>
-                            {users}
-                        </div>
-                    )
-                }
-            }
-        </StoreContext.Consumer>
-    )
-
+let mapStateToProps = (state) => {
+    
+    return {
+        dialogsData: state.dialogsPage.dialogsData
+       
+    }
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return{
+        getUserTopic: (messageID) => { dispatch(getUserTopicActionCreator(messageID)) }
+    }
+}
+
+const DialogItemContainer = connect(mapStateToProps, mapDispatchToProps)(DialogItem); 
+
 
 export default DialogItemContainer;

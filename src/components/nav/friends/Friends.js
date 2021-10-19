@@ -1,10 +1,8 @@
-import React from 'react';
 import Friend from './friend/Friend';
 import classes from './Friends.module.css';
 
 
 const Friends = (props) => {
-    // debugger;
 
 let friendList = props.friends.map( (friend) => <Friend key={friend.id} id={friend.id} name={friend.name} avatar={friend.avatar}/>  )  
     

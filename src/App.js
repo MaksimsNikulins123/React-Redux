@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Profile from './components/profile/Profile';
@@ -10,17 +9,18 @@ import DialogsContainer from './components/dialogs/DialogsContainer';
 import NavContainer from './components/nav/NavContainer';
 
 const App = () => {
+
   return (
     <BrowserRouter>
     <div className='app-wrapper'>
       <Header />
       <NavContainer />
       <div className='app-wrapper-content'>
-        <Route path='/profile' render={ () => ( <Profile />)} />
-        <Route path='/dialogs' render={ () => ( <DialogsContainer />)}/>     
-        <Route path='/news' component={News}/>
-        <Route path='/music' component={Music}/>
-        <Route path='/settings' component={Settings}/>
+      <Route path='/profile' render={ () => ( <Profile />)} />
+      <Route path='/dialogs' render={ () => ( <DialogsContainer />)}/>     
+      <Route path='/news' component={News}/>
+      <Route path='/music' component={Music}/>
+      <Route path='/settings' component={Settings}/>
       </div > 
     </div>
     </BrowserRouter>

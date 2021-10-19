@@ -1,25 +1,24 @@
-import { NavLink } from 'react-router-dom';
-import classes from './DialogItem.module.css';
+import DialogUser from './dialogUser/DialogUser';
 
 const DialogItem = (props) => {
 
-    let path = "/dialogs/" + props.id;
-  
-    let changeMessages = () => {
-        let messageID = props.id;
-        props.getUserTopic(messageID);
-        
-    }
+let getUserTopic = props.getUserTopic;
 
-    return( 
-            <div className={classes.dialogs_block}>
-                <div className={classes.dialogs_items}>
-                    <div className={classes.dialog }>
-                        <img src={props.avatar}/>
-                        <NavLink to={path} onClick={changeMessages} activeClassName={classes.active}>{props.name} </NavLink> 
-                    </div> 
-                </div>
-            </div>
-    )   
-}
+let users = props.dialogsData.map( 
+    (dialog) => 
+        <DialogUser
+            key={dialog.id} 
+            id={dialog.id} 
+            name={dialog.name} 
+            avatar={dialog.avatar}
+            getUserTopic={getUserTopic}
+        />
+)
+
+return (
+        <div>
+            {users}
+        </div>
+        )
+    }
 export default DialogItem;

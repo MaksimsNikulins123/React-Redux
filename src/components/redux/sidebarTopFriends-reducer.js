@@ -22,7 +22,7 @@ let initialState = {
 };
 
 const sidebarTopFriendsReducer = (state = initialState, action) => {
-
+// debugger;
     return state;
 }
 export default sidebarTopFriendsReducer;

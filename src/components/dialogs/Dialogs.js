@@ -1,9 +1,9 @@
-import React from 'react';
 import Topic from './topic/Topic';
 import classes from './Dialogs.module.css';
 import TextareaContainer from './textarea/TextareaContainer';
 import { Route } from 'react-router-dom';
 import DialogItemContainer from '../dialogs/dialogItem/DialogItemContainer';
+
 
 
 const Dialogs = (props) => {
@@ -15,15 +15,15 @@ const Dialogs = (props) => {
                         <DialogItemContainer />
                     </div>
                      <div className={classes.content}>
-                        <Route path={props.route} render={ () => ([
-                           
-                            <TextareaContainer />,
-                            <Topic 
-                            userTopic={props.userTopic} 
-                            /> 
-                            ])}/>
+                    <Route path={props.route}
+                        render={ () => 
+                            ([
+                                <TextareaContainer  />,
+                                <Topic userTopic={props.userTopic} />
+                            ])
+                            }
+                    />
                      </div>
-                  
                 </div>    
         )
 

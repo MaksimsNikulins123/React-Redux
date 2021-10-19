@@ -3,7 +3,7 @@ import classes from './Textarea.module.css';
 const Textarea = (props) => {
     
     let addMessage = () => { 
-        props.addMessage(props.userId);        
+        props.addMessage(props.userId);               
     }
 
     let onChangeMessageValue = (e) => { 

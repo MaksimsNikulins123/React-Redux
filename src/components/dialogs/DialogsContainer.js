@@ -1,26 +1,24 @@
 import Dialogs from "./Dialogs";
-import StoreContext from "../../StoreContext";
+import { connect } from "react-redux";
 
 
-const DialogsContainer = () => {
-    
-    return(
-        <StoreContext.Consumer>
-            {
-                (store) => 
-                {
-                    let state = store.getState();
 
-                    let route = '/dialogs/' + state.dialogsPage.userDialogId;
+let mapStateToProps = (state) => {
+  
+    let route = '/dialogs/' + state.dialogsPage.userDialogId;
 
-                    return(
-                            <Dialogs route={route}  userTopic={state.dialogsPage.dialogsData[state.dialogsPage.userDialogId]}/>   
-                        )
-                }
-            }
-        </StoreContext.Consumer>
-    )
-
+    return {
+        route: route,
+        userTopic: state.dialogsPage.dialogsData[state.dialogsPage.userDialogId]
+    }
 }
+
+let mapDispatchToProps = () => {
+    return{
+    
+    }
+}
+
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs); 
 
 export default DialogsContainer;

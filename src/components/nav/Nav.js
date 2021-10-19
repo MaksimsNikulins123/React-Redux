@@ -1,10 +1,9 @@
-// import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Friends from './friends/Friends';
 import classes from './Nav.module.css';
 
 const Nav = (props) => {
-  // debugger;
+
     return(
         <nav className={classes.nav}>
       <div className={`${classes.item} ${classes.active}`}>

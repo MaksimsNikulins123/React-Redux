@@ -1,8 +1,7 @@
-// import React from 'react';
 import classes from './Friend.module.css';
 
 const Friend = (props) => {
-    // debugger;
+    
     return (    
         <div className={classes.friendInfo}>
             <div className={classes.friendAvatar}>
@@ -12,8 +11,6 @@ const Friend = (props) => {
                 <span>{props.name}</span>
             </div>   
         </div>
-        
-        
         )
 }
 export default Friend;

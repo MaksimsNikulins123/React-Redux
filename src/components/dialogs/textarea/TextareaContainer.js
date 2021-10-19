@@ -1,44 +1,24 @@
 import Textarea from "./Textarea";
 import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/dialogs-reducer';
-import StoreContext from "../../../StoreContext";
+import { connect } from "react-redux";
 
-const TextareaContainer = () => {
-
-    return(
-        <StoreContext.Consumer>
-            {
-                (store) => 
-                {
-                    let state = store.getState();
-                    let newMessageText = state.dialogsPage.dialogsData[state.dialogsPage.userDialogId].textareaText;
-                    
-                    
-                    let addMessage = (userId) => {
-                        let action = addMessageActionCreator(userId);
-                        store.dispatch(action);
-                    }
-                    
-                    let updateNewMessageText = (text, userId) => {
-                        let action = updateNewMessageTextActionCreator(text, userId);
-                        store.dispatch(action);
-                    }
-
-                  
-                    
-                        return(
-                           
-                            <Textarea
-                                
-                                newMessageText={newMessageText} 
-                                userId={state.dialogsPage.userDialogId} 
-                                updateNewMessageText={updateNewMessageText} 
-                                addMessage={addMessage}
-                            />
-                        ) 
-                }
-            }
-        </StoreContext.Consumer>
-    )
+let mapStateToProps = (state) => {
+  
+    let newMessageText = state.dialogsPage.dialogsData[state.dialogsPage.userDialogId].textareaText;
+    let userId = state.dialogsPage.userDialogId;
+    return {
+        newMessageText: newMessageText,
+        userId: userId
+    }
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return{
+        updateNewMessageText: (text, userId) => { dispatch(updateNewMessageTextActionCreator(text, userId))},
+        addMessage: (userId) => { dispatch(addMessageActionCreator(userId))}  
+    }
+}
+
+const TextareaContainer = connect(mapStateToProps, mapDispatchToProps)(Textarea);
 
 export default TextareaContainer;

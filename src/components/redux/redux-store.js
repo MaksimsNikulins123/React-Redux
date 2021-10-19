@@ -3,11 +3,10 @@ import dialogsReducer from "./dialogs-reducer";
 import profileReducer from "./profile-reducer";
 import sidebarTopFriendsReducer from "./sidebarTopFriends-reducer";
 
-
 let reducers = combineReducers({
     profilePage: profileReducer,
     dialogsPage: dialogsReducer,
-    sidebarTopFriends: sidebarTopFriendsReducer,
+    sidebarTopFriends: sidebarTopFriendsReducer
 });
 
 
