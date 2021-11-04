@@ -1,3 +1,4 @@
+import React from 'react';
 import Topic from './topic/Topic';
 import classes from './Dialogs.module.css';
 import TextareaContainer from './textarea/TextareaContainer';

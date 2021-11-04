@@ -95,14 +95,24 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
-
+// debugger;
     switch(action.type){
-        case GET_USER_TOPIC: {
-            let copyState = {...state};
-            copyState.userDialogId = action.userId;
-            return copyState;
+        case GET_USER_TOPIC: 
+
+        return{
+            ...state,
+            userDialogId: action.userId
         }
-        case ADD_MESSAGE: {
+
+        // {
+        //     let copyState = {...state};
+        //     copyState.userDialogId = action.userId;
+        //     return copyState;
+            
+        // }
+        case ADD_MESSAGE: 
+        
+        {
             let newMessage = {
                 id: state.dialogsData[action.userId].messageData.length,
                 key: state.dialogsData[action.userId].messageData.length,  
@@ -120,14 +130,17 @@ const dialogsReducer = (state = initialState, action) => {
             copyState.dialogsData[action.userId].answerData = [...state.dialogsData[action.userId].answerData];
             copyState.dialogsData[action.userId].messageData.push(newMessage);
             copyState.dialogsData[action.userId].answerData.push(newAnswer);
-            copyState.dialogsData[action.userId].textareaText = '';
-            return copyState;
+            copyState.dialogsData[action.userId].textareaText = ''; 
+            return copyState; 
         }
             
-        case UPDATE_TEXAREA_MESSAGE_TEXT: {
+        case UPDATE_TEXAREA_MESSAGE_TEXT:
+        
+        {
             let copyState = {...state};
             copyState.dialogsData[action.userId].textareaText = action.newMessageText;
             return copyState;
+
         }
     
         default:

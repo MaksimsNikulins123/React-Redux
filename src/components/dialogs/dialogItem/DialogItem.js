@@ -1,3 +1,4 @@
+import React from 'react';
 import DialogUser from './dialogUser/DialogUser';
 
 const DialogItem = (props) => {

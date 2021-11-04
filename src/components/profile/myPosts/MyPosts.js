@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './MyPosts.module.css';
 import NewPostContainer from './newPost/NewPostContainer';
 import Post from './post/Post';

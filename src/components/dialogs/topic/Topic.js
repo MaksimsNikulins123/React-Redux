@@ -1,3 +1,4 @@
+import React from 'react';
 import Message from './message/Message';
 import Answer from './answer/Answer';
 

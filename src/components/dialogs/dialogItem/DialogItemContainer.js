@@ -1,3 +1,4 @@
+import React from 'react';
 import DialogItem from "./DialogItem";
 import { getUserTopicActionCreator } from '../../redux/dialogs-reducer';
 import { connect } from "react-redux";

@@ -1,3 +1,4 @@
+import React from 'react';
 import Friend from './friend/Friend';
 import classes from './Friends.module.css';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import Textarea from "./Textarea";
 import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/dialogs-reducer';
 import { connect } from "react-redux";
