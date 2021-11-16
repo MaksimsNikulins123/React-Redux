@@ -1,46 +1,19 @@
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
+const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE'
+const SET_USERS_TOTAL_COUNT = 'SET-USERS-TOTAL-COUNT'
+const SET_TOTAL_PAGE_COUNT = 'SET-TOTAL-PAGE-COUNT'
+const DEFAULT_PAGES = 'DEFAULT-PAGES'
+
 
 let initialState = {
-    users: [
-        // { 
-        //     id: 1,
-        //     avatar: 'https://assets.webiconspng.com/uploads/2016/11/avatar_boy_child_kid_male_user_young_icon_403024.png',
-        //     followed: true,
-        //     name: 'Den', 
-        //     status: "I'm boss",
-        //     location: {
-        //         city: 'Riga',
-        //         country: 'Latvia'
-        //     },
-            
-        // },
-        // { 
-        //     id: 2, 
-        //     avatar: 'https://www.shareicon.net/data/512x512/2015/09/18/103160_man_512x512.png',
-        //     followed: false,
-        //     name: 'Aleks', 
-        //     status: "Got you",
-        //     location: {
-        //         city: 'Moscow',
-        //         country: 'Russia'
-        //     },
-            
-        // },
-        // { 
-        //     id: 3, 
-        //     avatar: 'https://homevest.com/wp-content/uploads/2019/05/matureman1-512.png',
-        //     followed: true,
-        //     name: 'Dany', 
-        //     status: "You mine",
-        //     location: {
-        //         city: 'Kiev',
-        //         country: 'Ukraine'
-        //     },
-            
-        // }  
-    ]
+    users: [],
+    pageSize: 5,
+    totalUserCount: 0,
+    currentPage: 1,
+    totalPagesCount: 0,
+    pages: []
     
 }
 
@@ -79,9 +52,32 @@ const usersReducer = (state = initialState, action) => {
         case SET_USERS:
             return {
                 ...state,
-                users: [...state.users, ...action.users]
+                users: action.users
             }
 
+        case SET_CURRENT_PAGE:
+            return{
+                ...state,
+                currentPage: action.currentPage
+            }
+
+        case SET_USERS_TOTAL_COUNT:
+            return {
+                ...state,
+                totalUserCount: action.totalCount,
+            }
+
+        case DEFAULT_PAGES:
+            return {
+                ...state,
+                pages: action.pages
+            }
+
+        case SET_TOTAL_PAGE_COUNT:
+            return {
+                ...state,
+                totalPagesCount: action.totalPagesCount
+            }
         default:
             return state;
     }
@@ -108,5 +104,34 @@ export const setUsersActionCreator = (users) => {
         users: users
     }
 }
+
+export const setCurrentPageActionCreator = (currentPage) => {
+    return {
+        type: SET_CURRENT_PAGE,
+        currentPage: currentPage
+    }
+}
+
+export const setUsersTotalCountActionCreator = (totalCount) => {
+    return {
+        type: SET_USERS_TOTAL_COUNT,
+        totalCount: totalCount
+    }
+}
+
+export const setPagesListActionCreator = (pages) => {
+    return {
+        type: DEFAULT_PAGES,
+        pages: pages
+    }
+}
+
+export const setTotalPagesCountActionCreator = (totalPagesCount) => {
+    return {
+        type: SET_TOTAL_PAGE_COUNT,
+        totalPagesCount: totalPagesCount
+    }
+}
+
 
 export default usersReducer;

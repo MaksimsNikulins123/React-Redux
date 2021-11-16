@@ -95,7 +95,7 @@ let initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
-// debugger;
+
     switch(action.type){
         case GET_USER_TOPIC: 
 
@@ -104,12 +104,6 @@ const dialogsReducer = (state = initialState, action) => {
             userDialogId: action.userId
         }
 
-        // {
-        //     let copyState = {...state};
-        //     copyState.userDialogId = action.userId;
-        //     return copyState;
-            
-        // }
         case ADD_MESSAGE: 
         
         {
