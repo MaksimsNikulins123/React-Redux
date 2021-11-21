@@ -1,29 +1,10 @@
-import React from 'react';
-import classes from './Users.module.css';
+import classes from './LoadedUsers.module.css';
+import image from '../../../../assets/images/Useravatar.png';
 
-const Users = (props) => {
-
-return <div className={classes.users}>
-        <div className={classes.pagination}>
-            <div className={classes.paginationList}>
-                <div className={classes.paginationControl} onClick={ (e) => { props.paginationBack()}}>
-                    back
-                </div>
-             
-             { props.pages.map( 
-                    (page) => 
-
-                    <span key={page} className={ props.currentPage === page ? classes.selectedPage : classes.unselectedPage} 
-                    onClick={ (e) => { props.onChangePage(page)}}>{page}</span>)}
-               <div className={classes.paginationControl} onClick={ (e) => { props.paginationNext()}}>
-                    next
-               </div>
-               
-            </div>
-            
-        </div>
-         
-            {
+const LoadedUsers = (props) => {
+    // debugger;
+    return  <div className={classes.users}>
+                {
                 props.users.map(
         
                     (user) => 
@@ -31,7 +12,7 @@ return <div className={classes.users}>
                 <div className={classes.userBlock} key={user.id}>     
                     <div className={classes.userAvatarButtonBlock}>
                         <div  className={classes.avatar}>
-                           <img src={ user.photos.large } alt="Image"/>    
+                           <img src={ user.photos.large == null ? image : user.photos.large } alt="Image"/>    
                         </div>
                         <div className={classes.buttonFollow}>
                         
@@ -68,10 +49,6 @@ return <div className={classes.users}>
                 )
 
             }
-            
-            
-        </div>
-}     
-    
-
-export default Users;
+            </div>
+}
+export default LoadedUsers;

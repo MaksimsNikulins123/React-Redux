@@ -5,6 +5,8 @@ const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE'
 const SET_USERS_TOTAL_COUNT = 'SET-USERS-TOTAL-COUNT'
 const SET_TOTAL_PAGE_COUNT = 'SET-TOTAL-PAGE-COUNT'
 const DEFAULT_PAGES = 'DEFAULT-PAGES'
+const TOGGLE_IS_LOADING_USERS_PAGE = 'TOGGLE-IS-LOADING-USERS-PAGE'
+const TOGGLE_IS_LOADING_SELECTED_USERS_ON_PAGINATION = 'TOGGLE-IS-LOADING-SELECTED-USERS-ON-PAGINATION'
 
 
 let initialState = {
@@ -13,7 +15,9 @@ let initialState = {
     totalUserCount: 0,
     currentPage: 1,
     totalPagesCount: 0,
-    pages: []
+    pages: [],
+    isLoadingUsersPage: false,
+    isLoadingUsersOnPagination: false
     
 }
 
@@ -78,6 +82,19 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 totalPagesCount: action.totalPagesCount
             }
+
+        case TOGGLE_IS_LOADING_USERS_PAGE:
+            return {
+                ...state,
+                isLoadingUsersPage: action.isLoadingUsersPage
+            }
+
+        case TOGGLE_IS_LOADING_SELECTED_USERS_ON_PAGINATION:
+            return {
+                ...state,
+                isLoadingUsersOnPagination: action.isLoadingUsersOnPagination
+            }
+
         default:
             return state;
     }
@@ -130,6 +147,20 @@ export const setTotalPagesCountActionCreator = (totalPagesCount) => {
     return {
         type: SET_TOTAL_PAGE_COUNT,
         totalPagesCount: totalPagesCount
+    }
+}
+
+export const toggleIsLoadingUsersPageActionCreator = (isLoadingUsersPage) => {
+    return {
+        type: TOGGLE_IS_LOADING_USERS_PAGE,
+        isLoadingUsersPage: isLoadingUsersPage
+    }
+}
+
+export const toggleisLoadingUsersOnPaginationActionCreator = (isLoadingUsersOnPagination) => {
+    return {
+        type: TOGGLE_IS_LOADING_SELECTED_USERS_ON_PAGINATION,
+        isLoadingUsersOnPagination: isLoadingUsersOnPagination
     }
 }
 

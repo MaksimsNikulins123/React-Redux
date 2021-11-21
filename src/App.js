@@ -6,10 +6,10 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import News from './components/news/News';
 import Music from './components/music/Music';
 import Settings from './components/settings/Settings';
-// import UsersContainer from './components/users/UsersContainer';
 import DialogsContainer from './components/dialogs/DialogsContainer';
 import NavContainer from './components/nav/NavContainer';
 import UsersList from './components/usersList/UsersList';
+
 
 const App = () => {
 
