@@ -10,18 +10,22 @@ const TOGGLE_IS_LOADING_SELECTED_USERS_ON_PAGINATION = 'TOGGLE-IS-LOADING-SELECT
 
 
 let initialState = {
+    
     users: [],
     pageSize: 5,
     totalUserCount: 0,
     currentPage: 1,
     totalPagesCount: 0,
     pages: [],
+    currentPageList: [],
     isLoadingUsersPage: false,
-    isLoadingUsersOnPagination: false
+    isLoadingUsersOnPagination: false,
+    // followed: false
     
 }
 
 const usersReducer = (state = initialState, action) => {
+    debugger;
     switch(action.type){
         case FOLLOW:
             return {
@@ -121,6 +125,12 @@ export const setUsersActionCreator = (users) => {
         users: users
     }
 }
+// export const setPagesActionCreator = (pages) => {
+//     return {
+//         type: SET_USERS,
+//         users: users
+//     }
+// }
 
 export const setCurrentPageActionCreator = (currentPage) => {
     return {

@@ -7,7 +7,7 @@ const Post = (props) => {
     <div className={classes.item}>
         
         <div className={classes.post}>
-        <img src='https://cdn.w600.comps.canstockphoto.com/like-on-mobile-feedback-smartphone-eps-vectors_csp79925530.jpg'/>
+        <img src='https://cdn.w600.comps.canstockphoto.com/like-on-mobile-feedback-smartphone-eps-vectors_csp79925530.jpg' alt="img"/>
             <span>{props.message}</span>
         </div>
         <div className={classes.like}>

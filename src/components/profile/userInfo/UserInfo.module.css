@@ -2,20 +2,126 @@
   padding: 10px;   
   /* margin: 20px 0 0 20px; */
   display: flex;
+  /* justify-content: start; */
   color: blanchedalmond;
+}
+.userlogo{
+  /* display: flex; */
 }
 .userlogo img{
   margin-right: 10px;  
   width: 50px;
 }
 .description{
-  /* text-align: center; */
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* flex-direction: column; */
   background: rgb(41, 81, 155);
   opacity: 0.9;
-  /* margin-left: 10px; */
-  width: 200px;
+  /* width: 600px; */
 }
-.description p{
-  margin: 0 0 0 10px;
+.userInfo{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  color: rgb(49, 209, 17);
+  padding: 10px;
 }
+.userInfo span{
+  display: block;
+  /* padding-left: 10px; */
+  color: aliceblue;
+}
+.userInfoType{
+  /* padding: 0 10px ; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(49, 209, 17);
+  padding: 10px;
+}
+.contactsBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-left: 10px; */
+  /* width: 300px; */
+}
+.contactsBody span{
+  display: block;
+  /* color: aliceblue; */
+}
+.contactType {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(63, 3, 3);
+}
+.contactType span{
+  color: antiquewhite;
+  padding-left: 10px;
+}
+/* .fullName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+.fullNameBody{
+  color: rgb(113, 242, 247);
+}
+.aboutMe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+.aboutMeBody{
+  color: rgb(32, 28, 26);
+}
+.contacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+.contacts div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contactType{
+  color: rgb(98, 190, 136);
+}
+.lookingForAJob{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+.lookingForAJobBody{
+  color: rgb(192, 24, 88);
+}
+.lookingForAJobDescription{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+.lookingForAJobDescriptionBody{
+  color: rgb(60, 24, 192);
+} */
     

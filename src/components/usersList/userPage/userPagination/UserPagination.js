@@ -1,6 +1,7 @@
 import classes from './UserPagination.module.css';
 
 const UserPagination = (props) => {
+
     return  <div className={classes.pagination}>
                 <div className={classes.paginationList}>
                     <div className={classes.paginationControl} onClick={ (e) => { props.paginationBack()}}>
@@ -12,7 +13,7 @@ const UserPagination = (props) => {
                             props.pages.map( 
                                 (page) => 
                                 <span key={page} className={ 
-                                    props.currentPage === page 
+                                    props.currentPage === page
                                     ? 
                                     classes.selectedPage 
                                     : 

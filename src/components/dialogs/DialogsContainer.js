@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 
@@ -7,7 +7,7 @@ let mapStateToProps = (state) => {
     let route = '/dialogs/' + state.dialogsPage.userDialogId;
 
     return {
-        key: state.dialogsPage.userDialogId,
+        // key: state.dialogsPage.userDialogId,
         route: route,
         userTopic: state.dialogsPage.dialogsData[state.dialogsPage.userDialogId]
     }

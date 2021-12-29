@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Topic from './topic/Topic';
 import classes from './Dialogs.module.css';
 import { Route } from 'react-router-dom';
@@ -8,7 +8,7 @@ import DialogItemContainer from '../dialogs/dialogItem/DialogItemContainer';
 
 const Dialogs = (props) => {
 
-    return (<div className={classes.dialogs}>
+    return <div className={classes.dialogs}>
                     <div className={classes.users}>
                         <DialogItemContainer/>
                     </div>
@@ -21,6 +21,6 @@ const Dialogs = (props) => {
                 </div>    
         
 
-    )
+    
 }
 export default Dialogs;

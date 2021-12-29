@@ -1,8 +1,26 @@
 .header{
   background: url('https://img.lovepik.com/photo/50066/7884.jpg_wh860.jpg') ;
     grid-area: header;
-    margin-bottom: 10px;  
+    margin-bottom: 10px; 
+    display: flex; 
+    justify-content: space-between;
     }
     .header img{
       width: 150px; 
+    }
+    .auth{
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .auth div { 
+      background-color: cornflowerblue;
+      border-radius: 15px;
+      padding: 10px;
+      /* color: cornsilk; */
+    }
+    .auth a { 
+      /* background-color: cornflowerblue; */
+      color: rgb(255, 255, 255);
     }

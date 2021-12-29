@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 import DialogUser from './dialogUser/DialogUser';
 import classes from './DialogItem.module.css';
 
 const DialogItem = (props) => {
-
+// debugger;
 let getUserTopic = props.getUserTopic;
 
 let users = props.dialogsData.map( 
     (dialog) =>
-    <li key={dialog.id}>
+    // <li key={dialog.id}>
         <DialogUser
             key={dialog.id} 
             id={dialog.id} 
@@ -16,7 +16,7 @@ let users = props.dialogsData.map(
             avatar={dialog.avatar}
             getUserTopic={getUserTopic}
         />
-    </li> 
+    // </li> 
         
 )
 

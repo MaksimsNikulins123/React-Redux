@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './DialogUser.module.css';
 
@@ -15,7 +15,7 @@ const DialogUser = (props) => {
                     <div className={classes.dialogs_block}>
                         <div className={classes.dialogs_items}>
                             <div className={classes.dialog }>
-                                <img src={props.avatar}/>
+                                <img src={props.avatar} alt="avatar"/>
                                 <NavLink to={path} onClick={getUserTopic} activeClassName={classes.active}>{props.name} </NavLink> 
                             </div> 
                         </div>
